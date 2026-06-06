@@ -46,7 +46,7 @@ Para a construção deste ecossistema frontend, apliquei os três pilares fundam
 
 1. Clone o repositório em sua máquina:
    ```bash
-   git clone https://github.com[SEU_USUARIO]/[NOME_DO_REPOSITORIO].git
+   git clone (https://github.com/Ol1n4D/dio-desafios-frontend).git
    ```
 2. Navegue até a pasta do projeto.
 3. Abra o arquivo `index.html` em qualquer navegador web.
