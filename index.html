@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech App - Consulta de Produtos</title>
+    <style>
+        /* Estilização Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container Principal */
+        .app-container {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Formulário */
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        input {
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            color: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            border-color: #38bdf8;
+        }
+
+        button {
+            background-color: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #0ea5e9;
+        }
+
+        /* Caixa de Resultado */
+        .resultado-box {
+            margin-top: 25px;
+            background-color: #0f172a;
+            border-left: 4px solid #38bdf8;
+            padding: 15px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .resultado-box.erro {
+            border-left-color: #ef4444;
+        }
+
+        .resultado-box span {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .resultado-box strong {
+            font-size: 1.2rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">✨ NeoFin</div>
+            <h1>Consulta de Produto</h1>
+            <p>Insira o código do produto financeiro (CC, CD, EMP ou INV).</p>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <label for="codigoInput">Código do Produto</label>
+                <input type="text" id="codigoInput" placeholder="Ex: CC, CD, EMP, INV..." autocomplete="off">
+            </div>
+            
+            <button id="btnConsultar">Consultar Produto</button>
+
+            <div id="resultadoContainer" class="resultado-box hidden">
+                <span>Resultado Encontrado:</span>
+                <strong id="resultadoTexto"></strong>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Lógica de Validação do Desafio
+        function identificarProduto(codigo) {
+            switch (codigo) {
+                case "CC": return "Cartao de Credito";
+                case "CD": return "Conta Digital";
+                case "EMP": return "Emprestimo";
+                case "INV": return "Investimento";
+                default: return "Produto desconhecido";
+            }
+        }
+
+        // Interação com a Tela (DOM)
+        const btnConsultar = document.getElementById('btnConsultar');
+        const codigoInput = document.getElementById('codigoInput');
+        const resultadoContainer = document.getElementById('resultadoContainer');
+        const resultadoTexto = document.getElementById('resultadoTexto');
+
+        btnConsultar.addEventListener('click', () => {
+            // Remove espaços extras antes de testar
+            const codigoDigitado = codigoInput.value.trim();
+
+            if (codigoDigitado === "") {
+                alert("Por favor, digite um código primeiro.");
+                return;
+            }
+
+            // Executa a função idêntica ao do desafio DIO
+            const resultado = identificarProduto(codigoDigitado);
+
+            // Mostra o resultado na tela
+            resultadoTexto.textContent = resultado;
+            resultadoContainer.classList.remove('hidden');
+
+            // Se for desconhecido, muda a cor do painel para vermelho (erro)
+            if (resultado === "Produto desconhecido") {
+                resultadoContainer.classList.add('erro');
+            } else {
+                resultadoContainer.classList.remove('erro');
+            }
+        });
+
+        // Permite apertar "Enter" no teclado para consultar
+        codigoInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                btnConsultar.click();
+            }
+        });
+    </script>
+</body>
+</html>
