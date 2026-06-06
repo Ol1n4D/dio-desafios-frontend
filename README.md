@@ -1,5 +1,5 @@
 # dio-desafios-frontend
-Desafio proposto no curso Front End React do BootCamp Snatander 2026
+Desafio proposto no curso Front End React do BootCamp Santander 2026
 
 # 🏦 NeoFin - Validador de Produtos Financeiros
 
