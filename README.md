@@ -1,10 +1,9 @@
 # dio-desafios-frontend
 Desafio proposto no curso Front End React do BootCamp Santander 2026
 
-![Preview](./preview.png)
-
 
 # 🏦 NeoFin - Validador de Produtos Financeiros
+![Preview](./preview.png)
 
 ![Badge em Desenvolvimento](https://shields.io)
 ![GitHub License](https://shields.io[SEU_USUARIO]/[NOME_DO_REPOSITORIO]?style=for-the-badge)
