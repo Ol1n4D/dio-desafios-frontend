@@ -1,4 +1,4 @@
-[index.html](https://github.com/user-attachments/files/28657816/index.html)# dio-desafios-frontend
+# dio-desafios-frontend
 Desafio proposto no curso Front End React do BootCamp Santander 2026
 
 
