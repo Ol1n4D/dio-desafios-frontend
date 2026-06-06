@@ -1,6 +1,7 @@
 # dio-desafios-frontend
 Desafio proposto no curso Front End React do BootCamp Santander 2026
 
+![Preview](./preview.png)
 <img width="1341" height="605" alt="preview" src="https://github.com/user-attachments/assets/a1f6b4bf-7059-44fe-859b-ff80e6472f67" />
 
 
