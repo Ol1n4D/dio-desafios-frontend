@@ -55,7 +55,7 @@ Para a construção deste ecossistema frontend, apliquei os três pilares fundam
 
 ## 👨‍💻 Autor
 
-Construído com 💙 por **[Ol1n4D]**.
+Construído com 💙 por **Ol1n4D**.
 
 - **LinkedIn:** [Apenas o link do seu perfil aqui]
 - **DIO Profile:** [Link do seu perfil da DIO para recrutadores verem suas certificações]
