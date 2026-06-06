@@ -4,14 +4,14 @@ Desafio proposto no curso Front End React do BootCamp Santander 2026
 
 # 🏦 NeoFin - Validador de Produtos Financeiros
 ![Preview](./preview.png)
-[Uploading index.html…]()
+
 
 ![Badge em Desenvolvimento](https://github.com/Ol1n4D/dio-desafios-frontend)
 ![GitHub License](https://shields.io/github.com/Ol1n4D/dio-desafios-frontend?style=for-the-badge)
 
 Interface moderna de uma fintech criada para resolver o desafio de projeto **"Conhecendo os Pilares do Frontend"** da plataforma **DIO (Digital Innovation One)**. O sistema simula a validação e identificação rápida de produtos financeiros a partir de códigos específicos fornecidos por parceiros comerciais.
 
-🌐 **[Clique aqui para acessar o projeto no ar](https://(https://ol1n4d.github.io/dio-desafios-frontend/)/)**
+🌐 **[Clique aqui para acessar o projeto no ar](https://ol1n4d.github.io/dio-desafios-frontend/)**
 
 ---
 
